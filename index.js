@@ -1,3 +1,5 @@
+
+
 // translation lune
 
 window.addEventListener('scroll', function() {
@@ -20,10 +22,11 @@ window.addEventListener('scroll', function() {
 // apparence saisie clavier
 
 
-var typed = new Typed("multiple-text",{
+var typed = new Typed("#multiple-text", {
     strings: ["Frontend Developer", "App Developer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
+    smartBackspace: true,
     loop: true
-})
+});

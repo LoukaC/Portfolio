@@ -103,6 +103,9 @@ header {
     color: aqua;
 }
 
+.typed-cursor {
+}
+
 .home-content p{
     margin: 40px 0 20px 0;
     font-size: 16px;
@@ -147,7 +150,7 @@ header {
     background-size: cover;
     opacity: 0.7;
     transition: right 0.3s;
-    animation: ZoomIn 1.1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation: ZoomIn 1.1s ease forwards, floatImage 6s ease-in-out infinite;
     animation-delay: 1.1s, 3s;
     opacity: 0;
 }
