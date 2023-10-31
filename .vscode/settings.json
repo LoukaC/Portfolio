@@ -1,0 +1,37 @@
+{
+    "liveServer.settings.port": 5501
+
+    "editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "scope": [
+                "entity.name.tag.html",
+                "entity.name.tag.js",
+                "entity.name.tag.ts",
+                "entity.name.tag.jsx",
+                "entity.name.tag.tsx"
+            ],
+            "settings": {
+                "foreground": "#d83faa" // Changez la couleur selon vos préférences
+            }
+        },
+
+        {
+            "scope": [
+                "entity.other.attribute-name",
+            ],
+            "settings": {
+                "foreground": "#4fd452" // Changer la couleur selon vos préférences
+            }
+        
+        },
+
+        {
+            "scope": "string.quoted.double.html",
+            "settings": {
+                "foreground": "#39c1ee" // Changer la couleur selon vos préférences
+            }
+        }
+    ]
+}
+}

@@ -1,0 +1,421 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #191919;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding:  20px 10%;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 48px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+}
+
+.navbar {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    animation: slideLeft 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color:#555555;
+}
+
+
+#home{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 10px;
+    animation: slideRight 0.9s ease forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px;
+    animation: slideBottom 0.5s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.home-content h3:nth-of-type(2){
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.home-content h3 span {
+    color: aqua;
+}
+
+.home-content p{
+    margin: 40px 0 20px 0;
+    font-size: 16px;
+    animation: slideLeft 1.1s ease forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+}
+
+.home-content .social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color:#ffffff;
+    margin: 0px 15px 0px 0;
+    animation: slideLeft 1.1s ease forwards;
+     animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.home-content .social a:hover {
+    background-color: #ffffff;
+    color:#555555;
+    box-shadow: 0 0 20px white;
+}
+
+
+.moon {
+    position: fixed;
+    top: 200px;
+    right: 150px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('./images/pexels-pixabay-47367.webp'); /* Ajoutez le chemin vers votre image de texture de lune */
+    background-size: cover;
+    opacity: 0.7;
+    transition: right 0.3s;
+    animation: ZoomIn 1.1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1.1s, 3s;
+    opacity: 0;
+}
+
+.moon-pulse {
+	opacity: 1;
+	box-shadow: 0px 0px 15px 3px rgb(203, 196, 196);
+	width: 170px;
+	height: 170px;
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	animation: moonpulse 1s alternate infinite;
+	border-radius: 50%;
+	background-image: radial-gradient(circle at 25% 25%, #fef3f3, transparent 0%);
+}
+
+
+@keyframes moonpulse {
+	from {
+		box-shadow: 0 0 100px rgb(199, 194, 194), 0 0 100px rgb(199, 194, 194);
+	}
+	to {
+		box-shadow: 0 0 25px rgb(186, 179, 179), 0 0 75px rgb(192, 187, 187);
+	}
+}
+
+@keyframes slideRight {
+    0% {
+		transform: translateX(-100px);
+        opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+        opacity: 1;
+	}
+}
+
+@keyframes slideLeft {
+    0% {
+		transform: translateX(100px);
+        opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+        opacity: 1;
+	}
+}
+
+@keyframes slideBottom {
+    0% {
+		transform: translateY(-100px);
+        opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+        opacity: 1;
+	}
+}
+
+@keyframes slideTop {
+    0% {
+		transform: translateY(100px);
+        opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+        opacity: 1;
+	}
+}
+
+@keyframes ZoomIn{
+    0% {
+		transform: translateZ(100px);
+        opacity: 0;
+	}
+	100% {
+		transform: translateZ(0);
+        opacity: 1;
+	}
+}
+
+@keyframes floatImage{
+    0% {
+		transform: translateY(0);
+    
+	}
+
+     50% {
+		transform: translateY(-10px);
+
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+
+#home .html img{
+    opacity: 0.2;
+    position: absolute;
+    top: 305px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+
+
+.skill-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.skill{
+    border: #FFFFFF3B 2px solid;
+    padding: 10px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    flex: 1 1 200px;
+    
+}
+
+.skill-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-title i{
+    font-size: 40px;
+}
+
+.skill-box{
+    align-self: flex-start;
+    font-family: 'Anonymous Pro';
+}
+
+#projet {
+    display: flex;
+    flex-direction: column;
+}
+
+#projet p{
+    font-family: 'Anonymous Pro';
+}
+
+.projet-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.projet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: #ffffff 2px solid;
+    border-radius: 20px;
+    padding: 0px 40px;
+    width: 400px;
+    
+}
+
+.projet-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projet p {
+    text-align:left;
+    font-family: 'Anonymous Pro';
+}
+
+.projet ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+}
+.projet li {
+     font-size: 12px;
+     border: #ffffff 2px solid;
+     border-radius: 20px;
+     padding: 10px;
+}
+
+#contact {
+    margin-bottom: 50px; /* Ajoutez un espace en bas de la section de contact pour éviter que le footer ne la cache */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-sentence{
+}
+
+.contact-link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-link a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0f0f0f;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px;
+    transition: 0.3s;
+}
+
+
+
+
+
+.skill-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.essai{
+    display: flex;
+    flex-direction: column;  
+}
+
+.essai p{
+    margin: 0;
+}
+
+
+.vertical-line {
+    height: 130px; /* Ajustez la hauteur de la ligne en fonction de vos besoins */
+    width: 1px;
+    background-color: #ffffff; /* Couleur de la ligne */
+    margin: 0px 25px; /* Ajustez la marge pour définir l'espace entre les éléments */
+}
+
+
