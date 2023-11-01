@@ -24,12 +24,8 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    padding:  20px 10% 20px 10%;
+    padding:  20px 10%;
     z-index: 100;
-}
-
-.header .fixed {
-    border-bottom: 2px solid white;
 }
 
 .logo{
@@ -492,10 +488,91 @@ li{
 
 footer {
     text-align: center;
-
     width: 100%;
     background: transparent;
     font-family: 'Anonymous Pro';
+    font-size: 18px;
 }
 
 
+
+/* breakpoints */
+
+@media ( max-width: 900px){
+
+    html{
+        font-size: 60%;
+    }
+
+    header{
+        padding: 10px 5%;
+    }
+
+    section {
+        padding: 14rem 3% 0rem;
+    }
+    
+    footer{
+        padding: 10px 5%;
+    }
+
+     .moon{
+        width: 100px;
+        height: 100px;
+    }
+
+    .moon-pulse{
+        width: 80px;
+        height: 80px;
+        top: 10px;
+    }
+
+}
+
+
+@media ( max-width: 800px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .skill-content{
+        flex-wrap: wrap;
+    }
+
+
+    .html img{
+        top: 500px;
+        left: 55%;
+
+    }
+
+    .home-content h1 {
+        font-size: 42px;
+    }
+
+     .home-content h3 {
+        font-size: 26px;
+    
+    }
+
+    .project-content{
+        grid-template-columns: unset;
+    }
+
+     #project{
+        padding-bottom: 1000px;
+    }
+}
+
+@media ( max-width: 530px){
+
+
+    #skill{
+        padding-bottom: 1200px;
+    }
+    
+
+}
