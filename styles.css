@@ -340,11 +340,12 @@ li{
 }
 
 .skill-column li{
+    line-height: 1.2;
     margin: 10px 0;
     width: 180px;
 }
 
-.essai{
+.h3-line{
     display: flex;
     flex-direction: column;
     width: 45px;
