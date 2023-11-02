@@ -352,7 +352,7 @@ li{
 }
 
 .vertical-line {
-    height: 140px; /* hauteur ligne */
+    height: 200px; /* hauteur ligne */
     width: 1px;
     background-color: #ffffff; /* Couleur ligne */
     margin: 0px 0px 0px 25px;
@@ -579,6 +579,19 @@ footer {
     
     }
 
+    .vertical-line {
+        height: 130px; /* hauteur ligne */
+    }
+
+    .skill p{
+        font-size: 14px;
+    }
+    
+    .skill-column li{
+        width: 140px;
+        font-size: 14px;
+    }
+
     .project-content{
         display: flex;
         flex-direction: column;
@@ -613,11 +626,6 @@ footer {
     .vertical-line {
         height: 100px; /* hauteur ligne */
     }
-    .skill-column li{
-        margin:  0px;
-        width: 140px;
-        font-size: 14px;
-    }
 
     .project-box img {
         height: 180px;
@@ -638,15 +646,15 @@ footer {
     }
 
     .navbar-responsive a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.3s;
-    animation: slideLeft 0.5s ease forwards;
-    opacity: 0;
-    animation-delay: calc(0.2s * var(--i));
-}
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.3s;
+        animation: slideLeft 0.5s ease forwards;
+        opacity: 0;
+        animation-delay: calc(0.2s * var(--i));
+    }
 
     .navbar-responsive a:hover, 
     .navbar-responsive a.active {
@@ -666,16 +674,15 @@ footer {
         font-size: 30px;
     }
 
-    .skill-column li{
-        margin: 5px 0;
-    }
-
     .h3-line{
         width: 40px;
     }
 
     .vertical-line {
-        margin: 0px 0px 0px 20px;
+        height: 80px; /* hauteur ligne */
+    }
+    .skill-column li{
+        margin: 5px 0;
     }
 
     .project-box img {
