@@ -2,22 +2,13 @@
 
 // translation lune
 
-window.addEventListener('scroll', function() {
-    var moon = document.querySelector('.moon');
-    var scrollPosition = window.scrollY;
-    var windowWidth = window.innerWidth;
 
-    var moonWidth = moon.offsetWidth;
-    var endPosition = windowWidth - moonWidth;
+window.addEventListener('scroll', function(){
+  let scrollPosition = window.scrollY;
+  let moon = document.querySelector('.moon')
 
-    moon.style.right = -(scrollPosition * 0.05) + 'px';
-
-    if (scrollPosition > endPosition) {
-        moon.style.opacity = 0;
-    } else {
-        moon.style.opacity = 1;
-    }
-});
+    moon.style.right = -scrollPosition * 0.06 + "px"; 
+})
 
 // apparence saisie clavier
 
