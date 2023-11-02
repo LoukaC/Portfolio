@@ -65,7 +65,7 @@ header {
 }
 
 section {
-    height: 90vh;
+    height: 95vh;
     padding: 10rem 10% 2rem;
 }
 
@@ -139,8 +139,8 @@ span {
 
 .home-content .social a:hover {
     background-color: #ffffff;
-    color:#555555;
-    box-shadow: 0 0 20px white;
+    color:#191919;
+    box-shadow: 0 0 20px rgb(0, 255, 255);
 }
 
 
@@ -488,6 +488,12 @@ li{
     display: flex;
     gap: 10px;
 }
+
+.contact-link a:hover{
+    color: aqua;
+}
+
+
 
 /* footer */
 

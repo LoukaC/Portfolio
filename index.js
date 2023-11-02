@@ -53,4 +53,16 @@ window.onscroll =() =>{
     })
 }
 
+//defilement lors du changement de section
 
+navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        let targetId = event.target.getAttribute('href').substr(1);
+        let targetElement = document.getElementById(targetId);
+        window.scrollTo({
+            top: targetElement.offsetTop - 0,
+            behavior: "smooth"
+        });
+    });
+});
